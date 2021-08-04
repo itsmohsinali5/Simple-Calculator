@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+
+    <script>
+        function TakeValue(val){
+            document.getElementById("result").value += val;
+        }
+        function CalculateValue(){
+            document.getElementById("result").value = eval(document.getElementById("result").value);
+        }
+        function ClearValue(val){
+            document.getElementById("result").value = val;
+        }
+    </script>
+</head>
+<body>
+    <div class="row gx-0">
+        <div class="col-md-6 gx-0">
+            <div class="leftside d-flex justify-content-center align-items-center">
+                <h2>Simple Calculator</h2> <i class="fa fa-arrow-circle-o-right"></i>
+            </div>
+        </div>
+        <div class="col-md-6 gx-0">
+            <form>
+                <div class="rightside d-flex justify-content-center align-items-center">
+                    <div style="padding: 5px;">
+                        <h2>Start Calculation</h2>
+                    </div>
+
+                    <div class="box">
+                        <div class="display">
+                            <input type="text" style="background-color: blue; color: white;" class="form-control" readonly id="result"> 
+                        </div>
+                        <div class="keys">
+                            <div class="keyValues">
+                                <input type="button" class="btn-dark" value="7" onclick='TakeValue("7")'>
+                                <input type="button" class="btn-dark" value="8" onclick='TakeValue("8")'>
+                                <input type="button" class="btn-dark" value="9" onclick='TakeValue("9")'>
+                                <input type="button" class="btn-primary" value="*" onclick='TakeValue("*")'>
+                            </div>
+                            <div class="keyValues">
+                                <input type="button" class="btn-dark" value="4" onclick='TakeValue("4")'>
+                                <input type="button" class="btn-dark" value="5" onclick='TakeValue("5")'>
+                                <input type="button" class="btn-dark" value="6" onclick='TakeValue("6")'>
+                                <input type="button" class="btn-primary" value="-" onclick='TakeValue("-")'>
+                            </div>
+                            <div class="keyValues">
+                                <input type="button" class="btn-dark" value="1" onclick='TakeValue("1")'>
+                                <input type="button" class="btn-dark" value="2" onclick='TakeValue("2")'>
+                                <input type="button" class="btn-dark" value="3" onclick='TakeValue("3")'>
+                                <input type="button" class="btn-primary" value="+" onclick='TakeValue("+")'>
+                            </div>
+                            <div class="keyValues">
+                                <input type="button" class="btn-dark" value="0" onclick='TakeValue("0")'>
+                                <input type="button" class="btn-dark" value="C" onclick='ClearValue("")'>
+                                <input type="button" class="btn-dark" value="=" onclick='CalculateValue()'>
+                                <input type="button" class="btn-primary" value="/" onclick='TakeValue("/")'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
